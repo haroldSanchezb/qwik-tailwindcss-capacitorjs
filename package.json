@@ -1,6 +1,6 @@
 {
-  "name": "my-qwik-basic-starter",
-  "description": "Recommended for your first Qwik app",
+  "name": "todo-app",
+  "description": "Qwik TODO app",
   "engines": {
     "node": ">=15.0.0"
   },
