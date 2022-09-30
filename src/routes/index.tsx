@@ -1,12 +1,13 @@
 import { component$ } from '@builder.io/qwik';
 import type { DocumentHead } from '@builder.io/qwik-city';
+import Task from '~/components/tasks';
 
 export default component$(() => {
   return (
-    <span>Hola mundo</span>
+    <Task />
   );
 });
 
 export const head: DocumentHead = {
-  title: 'Welcome to Qwik',
+  title: 'My Qwik Todo',
 };

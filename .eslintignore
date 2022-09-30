@@ -33,3 +33,4 @@ vite.config.ts
 server
 postcss.config.js
 tailwind.config.js
+types/
