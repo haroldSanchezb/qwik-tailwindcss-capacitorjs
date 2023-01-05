@@ -1,0 +1,58 @@
+@mixin checked-task {
+  background: #f35429;
+  border: 1px solid #f35429;
+}
+
+.checkbox {
+  position: absolute;
+  opacity: 0;
+  width: 30px;
+  height: 30px;
+  z-index: 999;
+
+  & + label {
+    position: relative;
+    cursor: pointer;
+    padding: 0 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &::before {
+      content: '';
+      margin-right: 10px;
+      display: flex;
+      width: 19px;
+      height: 19px;
+      border: 1px solid #b8b8b8;
+      background: #fff;
+    }
+  }
+
+  &:hover + label::before {
+    @include checked-task;
+  }
+  
+  &--checked + label {
+    &::before {
+      @include checked-task;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      left: 3px;
+      background: white;
+      width: 2px;
+      height: 2px;
+      box-shadow: 
+        2px 0 0 white,
+        4px 0 0 white,
+        4px -2px 0 white,
+        4px -4px 0 white,
+        4px -6px 0 white,
+        4px -8px 0 white;
+      transform: rotate(45deg);
+    }
+  }
+}

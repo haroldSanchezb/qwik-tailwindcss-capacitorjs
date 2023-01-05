@@ -12,8 +12,8 @@ export default component$(() => {
 
   const state = useStore<TasksStore>({
     tasks: [{
-      status: 'initial',
-      value: '',
+      status: 'completed',
+      value: 'Pokemon',
     }],
   });
 
